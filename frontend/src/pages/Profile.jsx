@@ -82,7 +82,7 @@ function Profile() {
       "",
 
     "GitHub Repository":
-      "https://github.com",
+      "https://github.com/NgBich78/iot_manager.git",
 
     "Figma Design":
       "https://www.figma.com/design/JVBqFmLXqFFDWLUMo2JTNB/IOT?node-id=0-1&t=idKaVrkh7Bl5UluM-1",
