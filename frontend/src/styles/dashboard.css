@@ -1,0 +1,419 @@
+/* ==========================================
+   DASHBOARD
+========================================== */
+
+.dashboard-page {
+  min-width: 0;
+  min-height: 0;
+
+  overflow: hidden;
+}
+
+
+/* ==========================================
+   SENSOR GRID
+========================================== */
+
+.sensor-grid {
+  flex-shrink: 0;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      3,
+      minmax(0, 1fr)
+    );
+
+  gap: 22px;
+}
+
+
+/* ==========================================
+   SENSOR CARD
+========================================== */
+
+.sensor-card {
+  height:
+    clamp(
+      120px,
+      16vh,
+      160px
+    );
+
+  min-height: 0;
+
+  padding:
+    20px 24px;
+
+  background:
+    #FFFFFF;
+
+  border:
+    1px solid
+    var(--border);
+
+  border-radius:
+    15px;
+
+  box-shadow:
+    0 3px 10px
+    rgba(
+      15,
+      23,
+      42,
+      0.05
+    );
+}
+
+.sensor-header {
+  display: flex;
+  align-items: center;
+  justify-content:
+    space-between;
+
+  color:
+    #536175;
+
+  font-size: 16px;
+
+  font-weight: 600;
+}
+
+.sensor-icon {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius:
+    50%;
+}
+
+
+/* SENSOR COLORS */
+
+.sensor-icon.orange {
+  color:
+    #F97316;
+
+  background:
+    #FFF0E6;
+}
+
+.sensor-icon.blue {
+  color:
+    #3B82F6;
+
+  background:
+    #E7F0FF;
+}
+
+.sensor-icon.yellow {
+  color:
+    #D9A900;
+
+  background:
+    #FFF6CC;
+}
+
+
+/* SENSOR VALUE */
+
+.sensor-value {
+  margin-top:
+    clamp(
+      18px,
+      2.4vh,
+      28px
+    );
+
+  color:
+    #111827;
+
+  font-size:
+    clamp(
+      32px,
+      4vh,
+      44px
+    );
+
+  line-height: 1;
+
+  font-weight: 800;
+}
+
+.sensor-value small {
+  font-size:
+    clamp(
+      25px,
+      3.2vh,
+      35px
+    );
+}
+
+
+/* ==========================================
+   DEVICE GRID
+========================================== */
+
+.device-grid {
+  flex-shrink: 0;
+
+  margin-top: 20px;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      3,
+      minmax(0, 1fr)
+    );
+
+  gap: 22px;
+}
+
+
+/* ==========================================
+   DEVICE CARD
+========================================== */
+
+.device-card {
+  height:
+    clamp(
+      58px,
+      7.5vh,
+      72px
+    );
+
+  padding:
+    0 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content:
+    space-between;
+
+  background:
+    #FFFFFF;
+
+  border:
+    1px solid
+    var(--border);
+
+  border-radius:
+    14px;
+
+  box-shadow:
+    0 2px 8px
+    rgba(
+      15,
+      23,
+      42,
+      0.04
+    );
+}
+
+.device-info {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  color:
+    #172033;
+
+  font-size: 15px;
+
+  font-weight: 700;
+}
+
+.device-icon {
+  width: 36px;
+  height: 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius:
+    50%;
+
+  color:
+    #637083;
+
+  background:
+    #E9EEF2;
+}
+
+
+/* ==========================================
+   DEVICE SWITCH
+========================================== */
+
+.switch {
+  position: relative;
+
+  width: 66px;
+  height: 32px;
+
+  padding: 0;
+
+  border: none;
+
+  border-radius:
+    20px;
+
+  background:
+    #D6DCE1;
+}
+
+.switch i {
+  position: absolute;
+
+  left: 4px;
+  top: 4px;
+
+  width: 24px;
+  height: 24px;
+
+  border-radius:
+    50%;
+
+  background:
+    #FFFFFF;
+
+  box-shadow:
+    0 1px 4px
+    rgba(
+      0,
+      0,
+      0,
+      0.18
+    );
+
+  transition:
+    0.2s;
+}
+
+.switch span {
+  margin-left:
+    26px;
+
+  color:
+    #596578;
+
+  font-size: 9px;
+
+  font-weight: 800;
+}
+
+.switch.active {
+  background:
+    var(--primary);
+}
+
+.switch.active i {
+  left: 38px;
+}
+
+.switch.active span {
+  margin-left:
+    -26px;
+
+  color:
+    #FFFFFF;
+}
+
+
+/* ==========================================
+   SENSOR HISTORY CHART
+========================================== */
+
+.chart-card {
+  background:
+    #FFFFFF;
+
+  border:
+    1px solid
+    var(--border);
+
+  border-radius:
+    16px;
+
+  box-shadow:
+    0 3px 10px
+    rgba(
+      15,
+      23,
+      42,
+      0.04
+    );
+}
+
+.dashboard-chart {
+  flex: 1;
+
+  min-width: 0;
+  min-height: 0;
+
+  margin-top: 20px;
+
+  padding:
+    18px 22px 10px;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+}
+
+.dashboard-chart h2 {
+  flex-shrink: 0;
+
+  margin:
+    0 0 8px;
+
+  color:
+    #172033;
+
+  font-size: 17px;
+
+  font-weight: 700;
+}
+
+.chart-area {
+  flex: 1;
+
+  width: 100%;
+
+  min-width: 0;
+  min-height: 0;
+}
+
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (
+  max-width: 1100px
+) {
+
+  .sensor-grid,
+  .device-grid {
+    gap: 12px;
+  }
+
+  .sensor-card {
+    padding:
+      17px;
+  }
+
+  .device-card {
+    padding:
+      0 14px;
+  }
+}
