@@ -38,7 +38,7 @@ function generateSensorData() {
 
   sensors.push(newSensor);
 
-  // chỉ giữ 300 bản ghi gần nhất
+  // chỉ giữ 1000 bản ghi gần nhất
   const updated =
     sensors.slice(-1000);
 
